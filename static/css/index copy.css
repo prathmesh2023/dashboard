@@ -1,0 +1,167 @@
+.container {
+    margin: 25px;
+}
+
+
+
+.emerg-alert-point {
+    padding: 25px 18px 26px 25px;
+    border-radius: 10px;
+    background: #FFF;
+    margin-top: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+    width: 96%;
+    /* Ensure box-sizing is content-box (default), but explicitly setting it for clarity */
+}
+
+.emerg-alert-point .hedding {
+    display: flex;
+    justify-content: space-between;
+}
+
+.emerg-alert-point .hedding .left {
+    float: left;
+}
+
+.emerg-alert-point .hedding .right {
+    float: right;
+}
+
+.emerg-alert-point .hedding .left span {
+    color: #060606;
+    font-family: Poppins;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.45px;
+}
+
+.emerg-alert-point .hedding .right .svg svg {
+    margin-left: 12px;
+}
+
+.emerg-alert-point .camras {
+    margin-left: -37px;
+}
+
+.emerg-alert-point .camras .card {
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    margin-right: 15px;
+    border-radius: 3px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+.emerg-alert-point .camras .card-body {
+    padding: 0;
+}
+
+.emerg-alert-point .camras .card .video-container img {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px 5px 5px 5px;
+
+}
+
+.emerg-alert-point .camras .card-body .video-container {
+    position: relative;
+}
+
+.emerg-alert-point .camras .card-body .video-container .top-left {
+    position: absolute;
+    top: -7px;
+    left: -1px;
+}
+
+.emerg-alert-point .camras .card-body .video-container .top-right {
+    position: absolute;
+    top: -5px;
+    right: -1px;
+}
+
+.emerg-alert-point .camras .card-body .video-container .top-left .live {
+    display: inline-flex;
+    padding: 6px 8px 7px 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(6.5px);
+    border-radius: 3px 0px 0px 0px;
+
+}
+
+.emerg-alert-point .camras .card-body .video-container .top-left .live span {
+    color: #FFF;
+    font-family: Arial;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.24px;
+}
+
+.emerg-alert-point .camras .card-body .video-container .top-right .id {
+    display: inline-flex;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 3px 0px 0px;
+    background: #319F43;
+    backdrop-filter: blur(6.5px);
+}
+
+.emerg-alert-point .camras .card-body .video-container .top-right .id span {
+    color: #FFF;
+    font-family: Arial;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.27px;
+}
+
+.emerg-alert-point .camras .card-footer .flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.emerg-alert-point .camras .card-footer p {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+
+    letter-spacing: 0.33px;
+    line-height: 1.2;
+    /* Slightly more spacious line height for readability */
+    margin-bottom: 0;
+}
+
+.emerg-alert-point .camras .card-footer span {
+    color: #B4B4B4;
+    font-family: Poppins;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 2;
+    letter-spacing: 0.24px;
+}
+
+.emerg-alert-point .camras .card-footer p+span {
+    margin-top: 0;
+    /* Remove top margin of span following a paragraph */
+    line-height: 1;
+}
+
+.emerg-alert-point .camras .container{
+    display: flex;
+    justify-content: space-between;
+    overflow-x: auto;
+}

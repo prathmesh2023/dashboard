@@ -1,0 +1,437 @@
+{% extends 'base.html' %}
+{% block title %}
+Object Tracking
+{% endblock title %}
+{% block nav_link %}
+                    <span style="text-decoration: none; color:#878787; cursor: pointer;" onclick="window.location.href='/'">Home</span> >  Object Tracking
+{% endblock nav_link %}
+{% block main %}
+{% load static %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.3.4/css/bootstrap3/bootstrap-switch.min.css"
+  rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{% static 'css/slider.css' %}">
+<link rel="stylesheet" href="{% static 'css/obj_tracking.css' %}">
+
+<div class="row">
+
+
+  <div class="col-md-7 gx-0">
+    <div class="box-main1">
+      <div class="video-section">
+        <div class="heading-part">
+          <div class="left">
+            <span>Video Visuallization</span>
+          </div>
+          <div class="right">
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                <path
+                  d="M16.625 16.6252L13.1868 13.187M13.1868 13.187C13.7749 12.5988 14.2414 11.9006 14.5597 11.1322C14.878 10.3638 15.0418 9.54022 15.0418 8.7085C15.0418 7.87677 14.878 7.05319 14.5597 6.28477C14.2414 5.51636 13.7749 4.81816 13.1868 4.23004C12.5987 3.64192 11.9005 3.1754 11.1321 2.85711C10.3637 2.53882 9.54007 2.375 8.70834 2.375C7.87662 2.375 7.05303 2.53882 6.28462 2.85711C5.5162 3.1754 4.81801 3.64192 4.22989 4.23004C3.04212 5.4178 2.37485 7.02875 2.37485 8.7085C2.37485 10.3882 3.04212 11.9992 4.22989 13.187C5.41765 14.3747 7.0286 15.042 8.70834 15.042C10.3881 15.042 11.999 14.3747 13.1868 13.187Z"
+                  stroke="#363636" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></span>
+
+            <span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
+                <path
+                  d="M9.49999 2.375C8.62916 2.375 7.91666 3.0875 7.91666 3.95833C7.91666 4.82917 8.62916 5.54167 9.49999 5.54167C10.3708 5.54167 11.0833 4.82917 11.0833 3.95833C11.0833 3.0875 10.3708 2.375 9.49999 2.375ZM9.49999 13.4583C8.62916 13.4583 7.91666 14.1708 7.91666 15.0417C7.91666 15.9125 8.62916 16.625 9.49999 16.625C10.3708 16.625 11.0833 15.9125 11.0833 15.0417C11.0833 14.1708 10.3708 13.4583 9.49999 13.4583ZM9.49999 7.91667C8.62916 7.91667 7.91666 8.62917 7.91666 9.5C7.91666 10.3708 8.62916 11.0833 9.49999 11.0833C10.3708 11.0833 11.0833 10.3708 11.0833 9.5C11.0833 8.62917 10.3708 7.91667 9.49999 7.91667Z"
+                  fill="#363636" />
+              </svg></span>
+          </div>
+        </div>
+        <div class="camras">
+          <div id="video-container" class="max-video-container">
+            <!-- <img src=" {% static 'video.jpg' %}" alt=""> -->
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <div class="all-servillance">
+      <div class="heading">
+          <span>AI Surveillance Tools</span>
+      </div>
+      <div class="cards ">
+          <div class="row gx-0">
+              <div class="col">
+              
+                  <div class="frame " onclick="window.location.href='/obj_detection/{{id}}'">
+                      <center>
+                          <div class="circle tex-center ">
+
+                              <img src="{% static 'png/3dobj.png' %}" alt="" style="aspect-ratio: 3/2; ">
+                          </div>
+                          <span>AI Object Detection</span>
+                      </center>
+                  </div>
+            
+              </div>
+
+              <div class="col">
+                  <div class="frame " onclick="window.location.href='/obj_tracking/{{id}}'">
+                      <center>
+                          <div class="circle tex-center ">
+
+                              <img src="{% static 'svg/object_tracking.svg' %}" alt="">
+                          </div>
+                          <span>Object Tracking</span>
+                      </center>
+                  </div>
+              </div>
+
+              <div class="col">
+                  <div class="frame " onclick="window.location.href='/ai_bot/{{id}}'">
+                      <center>
+                          <div class="circle tex-center ">
+                              <img src="{% static 'png/Bot.png' %}" alt="">
+                          </div>
+                          <span>AI Voice Boat</span>
+                      </center>
+                  </div>
+              </div>
+
+
+
+
+              <div class="col ">
+                  <div class="frame ">
+                      <center>
+                          <div class="circle tex-center ">
+                              <img src="{% static 'png/motion.png' %}" alt="">
+                          </div>
+                          <span>Motion Detection</span>
+                      </center>
+                  </div>
+              </div>
+
+              <div class="col">
+                  <div class="frame ">
+                      <center>
+                          <div class="circle tex-center ">
+                              <img src="{% static 'png/Alarm.png' %}" alt="">
+                          </div>
+                          <span>Notification</span>
+                      </center>
+                  </div>
+              </div>
+
+              <!-- <div class="col">
+                  <div class="frame ">
+                      <center>
+                      <div class="circle tex-center ">
+                          <img src="{% static 'png/Alarm.png' %}" alt="">
+                      </div>
+                      <span>Object Trainning</span>
+                  </center>
+                  </div>
+              </div>
+-->
+
+
+
+
+
+          </div>
+
+
+
+      </div>
+  </div>
+  
+  </div>
+
+
+
+
+  <div class="col-md-4 gx-0">
+
+
+
+
+    <div class="alert-table">
+      <div class="heading-part">
+        <div class="left my-3">
+          <span>Object Tracking </span>
+        </div>
+        <div class="right my-3">
+          <!-- <select name="" id="">
+                        <option>All</option>
+                        <option>1</option>
+                        <option>2</option>
+                    </select> -->
+          <div class="search mx-2">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="13" viewBox="0 0 11 13" fill="none">
+              <path
+                d="M9.24951 12.335C8.76326 12.335 8.34995 12.1649 8.00957 11.8245C7.6692 11.4841 7.49901 11.0708 7.49901 10.5845C7.49901 10.5165 7.50387 10.4459 7.5136 10.3727C7.52332 10.2996 7.53791 10.2341 7.55736 10.1761L3.44368 7.78374C3.27836 7.92961 3.09358 8.04398 2.88936 8.12684C2.68513 8.20969 2.47118 8.25093 2.24751 8.25054C1.76126 8.25054 1.34795 8.08035 1.00757 7.73998C0.667197 7.3996 0.497009 6.98629 0.497009 6.50004C0.497009 6.01379 0.667197 5.60048 1.00757 5.2601C1.34795 4.91973 1.76126 4.74954 2.24751 4.74954C2.47118 4.74954 2.68513 4.79097 2.88936 4.87382C3.09358 4.95668 3.27836 5.07085 3.44368 5.21634L7.55736 2.82399C7.53791 2.76564 7.52332 2.70009 7.5136 2.62735C7.50387 2.55461 7.49901 2.484 7.49901 2.41554C7.49901 1.92929 7.6692 1.51598 8.00957 1.1756C8.34995 0.835227 8.76326 0.665039 9.24951 0.665039C9.73576 0.665039 10.1491 0.835227 10.4894 1.1756C10.8298 1.51598 11 1.92929 11 2.41554C11 2.90179 10.8298 3.3151 10.4894 3.65548C10.1491 3.99585 9.73576 4.16604 9.24951 4.16604C9.02583 4.16604 8.81188 4.12481 8.60766 4.04234C8.40343 3.95987 8.21866 3.8455 8.05333 3.69924L3.93966 6.09159C3.95911 6.14994 3.9737 6.21568 3.98342 6.28881C3.99315 6.36194 3.99801 6.43235 3.99801 6.50004C3.99801 6.56773 3.99315 6.63833 3.98342 6.71185C3.9737 6.78537 3.95911 6.85092 3.93966 6.90849L8.05333 9.30084C8.21866 9.15496 8.40343 9.04079 8.60766 8.95832C8.81188 8.87586 9.02583 8.83443 9.24951 8.83404C9.73576 8.83404 10.1491 9.00423 10.4894 9.3446C10.8298 9.68498 11 10.0983 11 10.5845C11 11.0708 10.8298 11.4841 10.4894 11.8245C10.1491 12.1649 9.73576 12.335 9.24951 12.335Z"
+                fill="#595959" />
+            </svg>
+          </div>
+
+          <div class="search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
+              fill="none">
+              <path
+                d="M14 14.0001L11.1047 11.1048M11.1047 11.1048C11.5999 10.6095 11.9928 10.0216 12.2608 9.3745C12.5289 8.72742 12.6668 8.03387 12.6668 7.33347C12.6668 6.63307 12.5289 5.93953 12.2608 5.29244C11.9928 4.64535 11.5999 4.0574 11.1047 3.56214C10.6094 3.06688 10.0215 2.67402 9.37438 2.40599C8.72729 2.13795 8.03375 2 7.33335 2C6.63295 2 5.9394 2.13795 5.29232 2.40599C4.64523 2.67402 4.05727 3.06688 3.56202 3.56214C2.5618 4.56236 1.99988 5.91895 1.99988 7.33347C1.99988 8.748 2.5618 10.1046 3.56202 11.1048C4.56224 12.105 5.91882 12.6669 7.33335 12.6669C8.74787 12.6669 10.1045 12.105 11.1047 11.1048Z"
+                stroke="#595959" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div class="setting mx-2"> <svg xmlns="http://www.w3.org/2000/svg" width="17" height="18" viewBox="0 0 17 18"
+              fill="none">
+              <path
+                d="M13.8125 8.99984C13.8125 8.83692 13.8054 8.68109 13.7913 8.51817L15.1088 7.51942C15.3921 7.30692 15.47 6.91025 15.2929 6.59859L13.9683 4.31067C13.8834 4.16063 13.746 4.04727 13.5826 3.99236C13.4192 3.93745 13.2412 3.94486 13.0829 4.01317L11.56 4.65775C11.2979 4.47359 11.0217 4.31067 10.7313 4.17609L10.5258 2.53984C10.4833 2.18567 10.1788 1.9165 9.82459 1.9165H7.18251C6.82126 1.9165 6.51667 2.18567 6.47417 2.53984L6.26876 4.17609C5.97834 4.31067 5.70209 4.47359 5.44001 4.65775L3.91709 4.01317C3.59126 3.8715 3.20876 3.999 3.03167 4.31067L1.70709 6.60567C1.53001 6.91734 1.60792 7.30692 1.89126 7.5265L3.20876 8.52525C3.17939 8.84333 3.17939 9.16343 3.20876 9.4815L1.89126 10.4803C1.60792 10.6928 1.53001 11.0894 1.70709 11.4011L3.03167 13.689C3.20876 14.0007 3.59126 14.1282 3.91709 13.9865L5.44001 13.3419C5.70209 13.5261 5.97834 13.689 6.26876 13.8236L6.47417 15.4598C6.51667 15.814 6.82126 16.0832 7.17542 16.0832H9.81751C10.1717 16.0832 10.4763 15.814 10.5188 15.4598L10.7242 13.8236C11.0146 13.689 11.2908 13.5261 11.5529 13.3419L13.0758 13.9865C13.4017 14.1282 13.7842 14.0007 13.9613 13.689L15.2858 11.4011C15.4629 11.0894 15.385 10.6998 15.1017 10.4803L13.7842 9.4815C13.8054 9.31859 13.8125 9.16275 13.8125 8.99984ZM8.52834 11.479C7.16126 11.479 6.04917 10.3669 6.04917 8.99984C6.04917 7.63275 7.16126 6.52067 8.52834 6.52067C9.89542 6.52067 11.0075 7.63275 11.0075 8.99984C11.0075 10.3669 9.89542 11.479 8.52834 11.479Z"
+                fill="#595959" />
+            </svg></div>
+        </div>
+
+      </div>
+
+      <section class="naming">
+        <div class="row">
+          <div class="col-6">
+            <p class="name">Object Type :</p>
+          </div>
+          <div class="col-6">
+
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <p class="name">Object Type :</p>
+          </div>
+          <div class="col-6">
+
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-6">
+            <p class="name">Tracking Methods :</p>
+          </div>
+          <div class="col-6 gx-0">
+
+          </div>
+
+        </div>
+
+
+
+
+        <div class="row">
+          <div class="col-12 camrec">
+            <div class="left">
+              <p class="name" style="color: #8B8B8B;
+              font-family: Poppins;
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+              letter-spacing: 0.3px;">Cam Records :</p>
+            </div>
+            <!-- <div class="right">
+              <div class="plus">
+                <img src="{% static 'svg/plus.svg' %}" alt="">
+              </div>
+              <div class="solar-left">
+                <img src="{% static 'svg/solarleft.svg' %}" alt="">
+              </div>
+              <div class="solar-right">
+                <img src="{% static 'svg/solarright.svg' %}" alt="">
+              </div>
+              <div class="trash">
+                <img src="{% static 'svg/trash.svg' %}" alt="">
+              </div>
+            </div> -->
+
+
+          </div>
+
+          <div class="slider">
+
+            <div id="slider-container" class="slider">
+              <div class="slide">
+                <img src="{% static '/images/cam.jpg' %}" alt="">
+
+              </div>
+
+              <div class="slide">
+                <img src="{% static '/images/cam.jpg' %}" alt="">
+
+              </div>
+              <div class="slide">
+                <img src="{% static '/images/cam.jpg' %}" alt="">
+
+              </div>
+              <div class="slide">
+                <img src="{% static '/images/cam.jpg' %}" alt="">
+
+              </div>
+              <div class="slide">
+                <img src="{% static '/images/cam.jpg' %}" alt="">
+
+              </div>
+              <div class="slide">
+                <img src="{% static '/images/cam.jpg' %}" alt="">
+              </div>
+
+
+            </div>
+
+
+
+
+            <div class="overlay"></div>
+          </div>
+
+
+          <div class="text-center my-4"
+            style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <div style="display: flex; justify-content: center; align-items: center;">
+              <i onclick="prev()" class="fas fa-angle-left control-prev-btn" style="display: flex;
+               
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+
+               
+                border-radius: 13px;
+                background: #E4E4E4;
+                font-size: 10px;
+                height: 20px;
+                width: 20px;
+
+                ">
+              </i>
+              <i onclick="next()" class="fas fa-angle-right" style="display: flex;
+
+                justify-content: center;
+                margin-left: 5px;
+
+                align-items: center;
+                gap: 5px;
+                border-radius: 13px;
+                background: #E4E4E4;
+                     height: 20px;
+                     width: 20px;
+                     font-size: 10px;
+                     ">
+              </i>
+            </div>
+            <div onclick="next()" class="control-next-btn" style="margin-top: 10px;">
+            </div>
+          </div>
+
+
+        </div>
+
+        <div class="row">
+
+        </div>
+
+        <div class="row">
+          <div class="flex">
+            <div class="left">
+              <span>Object Tracking Records</span>
+            </div>
+            <div class="right">
+              <img src="{% static 'svg/shortcut.svg' %}" alt="">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="contaner range text-center">
+            <!-- <img src="{% static 'svg/range.svg' %}" alt=""> -->
+            <img src="{% static 'svg/range2.svg' %}" alt="">
+
+          </div>
+        </div>
+
+
+      </section>
+
+      <br><br>
+
+      <section class="btn-submit" style="padding-bottom: 30px; margin: 25px;">
+        <div class="row">
+          <div class="col">
+            <button class="btn btn-outline-dark float-start">Open track</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-dark ">Save track</button>
+          </div>
+          <div class="col">
+            <button class="btn btn-outline-dark float-end">Cancel</button>
+          </div>
+        </div>
+      </section>
+
+
+    </div>
+
+    </section>
+  </div>
+  <br>
+</div>
+</div>
+
+
+
+
+<script>
+
+  function prev() {
+    document.getElementById('slider-container').scrollLeft -= 270;
+  }
+
+  function next() {
+    document.getElementById('slider-container').scrollLeft += 270;
+  }
+
+
+  $(".slide img").on("click", function () {
+    $(this).toggleClass('zoomed');
+    $(".overlay").toggleClass('active');
+  })
+
+</script>
+
+
+
+<script>
+  var videoContainer = document.getElementById('video-container');
+
+  function loadVideo() {
+      var videoElement = document.createElement('img');
+      videoElement.src = '/streaming/video_feed/{{id}}';
+      console.log(videoElement.src);
+      videoContainer.appendChild(videoElement);
+  }
+
+  loadVideo();
+</script> 
+
+</div>
+
+</div>
+</div>
+
+
+
+
+
+{% endblock main %}

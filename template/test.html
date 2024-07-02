@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox Status</title>
+</head>
+<body>
+    <label for="statusCheckbox">Status:</label>
+    <input type="checkbox" id="statusCheckbox">
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // API endpoint URL
+            const apiUrl = 'http://localhost/php_api/api.php?action=set_features&camera_id=1&alert_type_id=1';
+
+            // Fetch the API response
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    // Check the status in the API response
+                    const status = data.status;
+
+                    // Get the checkbox element
+                    const checkbox = document.getElementById('statusCheckbox');
+
+                    // Update the checkbox state based on the status
+                    checkbox.checked = (status === 'on');
+                })
+                .catch(error => {
+                    console.error('Error fetching the API:', error);
+                });
+        });
+    </script>
+</body>
+</html>

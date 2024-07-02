@@ -1,0 +1,228 @@
+
+.container {
+    margin: 25px;
+    
+    width: calc(100% - 25px); /* Adjusted width to include margin */
+    overflow-x: scroll;
+    white-space: nowrap;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.col-md-3
+{
+margin-top: 20px;
+
+}
+
+
+.container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers */
+}
+
+/* .container::-webkit-scrollbar {
+    height: 8px; 
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px; 
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+} */
+
+.card {
+    display: inline-block;
+    width: 184px;
+    margin: 0 15px 0 0;
+    border-radius: 3px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.60) 0%, rgba(0, 0, 0, 0.60) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat;
+}
+
+
+.card-body {
+    padding: 0;
+}
+
+.video-container img,video {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    height: fit-content;
+}
+
+.video-container {
+    position: relative;
+}
+.emerg-alert-point .camras .card-body .video-container {
+    position: relative;
+}
+
+.emerg-alert-point .camras .card-body .video-container .top-left {
+    position: absolute;
+    top: -7px;
+    left: -1px;
+}
+
+.emerg-alert-point .camras .card-body .video-container .top-right {
+    position: absolute;
+    top: -5px;
+    right: -1px;
+}
+
+.emerg-alert-point .camras .card-body .video-container .top-left .live {
+    display: inline-flex;
+    padding: 6px 8px 7px 6px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(6.5px);
+    border-radius: 3px 0px 0px 0px;
+
+}
+
+.emerg-alert-point .camras .card-body .video-container .top-left .live span {
+    color: #FFF;
+    font-family: Arial;
+    font-size: 8px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.24px;
+}
+
+.emerg-alert-point .camras .card-body .video-container .top-right .id {
+    display: inline-flex;
+    padding: 6px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 3px 0px 0px;
+    background: #319F43;
+    backdrop-filter: blur(6.5px);
+}
+
+.emerg-alert-point .camras .card-body .video-container .top-right .id span {
+    color: #FFF;
+    font-family: Arial;
+    font-size: 9px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.27px;
+}
+.top-left, .top-right {
+    position: absolute;
+    top: -5px;
+}
+
+.top-left {
+    left: -1px;
+}
+
+.top-right {
+    right: -1px;
+}
+
+.live {
+    display: inline-flex;
+    padding: 6px 8px 7px 6px;
+    background: rgba(255, 255, 255, 0.20);
+    border-radius: 3px 0 0 0;
+}
+
+.live span {
+    color: #FFF;
+    font-family: Arial;
+    font-size: 8px;
+    font-weight: 400;
+}
+
+.id {
+    display: inline-flex;
+    padding: 6px;
+    background: #319F43;
+    border-radius: 0 3px 0 0;
+}
+
+.id span {
+    color: #FFF;
+    font-family: Arial;
+    font-size: 9px;
+    font-weight: 400;
+}
+
+.card-footer .flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-footer p {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.33px;
+    line-height: 1.2;
+    margin-bottom: 0;
+}
+
+.card-footer span {
+    color: #B4B4B4;
+    font-family: Poppins;
+    font-size: 8px;
+    font-weight:
+    400;
+    line-height: 2;
+    letter-spacing: 0.24px;
+}
+
+.card-footer p + span {
+    margin-top: 0;
+    line-height: 1;
+}
+
+.emerg-alert-point {
+    padding: 25px 18px 26px 25px;
+    border-radius: 10px;
+    background: #FFF;
+    margin: 25px;
+    width: 96%;
+}
+
+.emerg-alert-point .hedding {
+    display: flex;
+    justify-content: space-between;
+}
+
+.emerg-alert-point .hedding .left {
+    float: left;
+}
+
+.emerg-alert-point .hedding .right {
+    float: right;
+}
+
+.emerg-alert-point .hedding .left span {
+    color: #060606;
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.45px;
+}
+
+.emerg-alert-point .hedding .right .svg svg {
+    margin-left: 12px;
+}
+
+.emerg-alert-point .camras {
+    margin-left: -37px;
+}
+
+
+
+

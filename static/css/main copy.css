@@ -1,0 +1,131 @@
+
+
+body
+{
+    background: #FFF;
+}
+
+
+.sidebar {
+    width: 150px;
+    background: #181818;
+    border-radius: 0px 20px 20px 0px;
+    box-shadow: 0px 0px 15px 10px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    height: calc(100% - 40px); /* Subtract margin from height */
+    overflow: auto;
+    margin-top: 20px; /* Add margin to the top */
+    margin-bottom: 20px; /* Add margin to the bottom */
+}
+
+
+.sidebar .brand .logo span{
+    color: #FFF;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    font-family : Arial;
+    display: block;
+    margin-top: 25px;
+}
+
+.sidebar .nav ul{
+    display: inline-flex;
+    flex-direction: column;
+    /* align-items: flex-start;
+     */
+     align-items: center;
+    gap: 40px;
+    padding: 50px;
+    
+}
+
+.sidebar .nav ul li{
+    list-style: none;
+}
+
+.header{
+    padding: 0px 185px;
+}
+.header .navbar .navbar-brand{
+    color: #060606;
+    font-family: Poppins;
+    font-size: 37px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+
+
+.main{
+/* width: 1215px;
+height: 851px;
+flex-shrink: 0; */
+border-radius: 20px;
+background: #F4F4F4;
+margin-left: 180px;
+margin-right: 35px;
+}
+
+.main .camras{
+    border-radius: 10px;
+    background: #FFF;
+    margin: 40px 30px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .bell{
+    display: flex;
+
+padding: 14px 18px 16px 17px;
+justify-content: center;
+align-items: center;
+border-radius: 10px;
+background: #F8F8F8;
+margin-left: 18px;
+}
+.header .computer{
+    display: flex;
+
+padding: 11px 13px 11px 14px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 10px 0px 0px 10px;
+border: 2px solid #EFEFEF;
+background: #F8F8F8;
+}
+.header .dots{
+    display: flex;
+
+padding: 14px 16px 14px 17px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0;
+border-radius: 0px 10px 10px 0px;
+background: #F8F8F8;
+}
+.date,
+.right-side {
+    display: flex;
+}
+
+.right-side {
+    
+}
+
+
+/* .bg-color-primary
+{
+    background-color: #f6f6f6;
+}
+#video-container img {
+    width: 100%;
+} */

@@ -1,0 +1,88 @@
+.alert-table .flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.alert-table .flex .right {
+    float: right;
+}
+
+.alert-table .flex .left {
+    flex: left;
+}
+
+.alert-table .flex .left span {
+    color: #363636;
+    font-family: Poppins;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.33px;
+}
+
+.alert-table .range {
+    /* 
+    height: 156px;
+
+    border-radius: 5px;
+    background: #F0F0F0;
+     */
+     width: 100%;
+     height: auto;
+
+     margin-top: 20px;
+     margin: 0;
+     padding: 0;
+
+  
+}
+
+
+
+
+
+.alert-table .btn-submit {
+    margin-top: 300px;
+
+}
+
+.alert-table .btn-submit .btn-dark {
+
+
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+
+    border-radius: 25px;
+    background: #363636;
+
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}
+
+.alert-table .btn-submit .btn-outline-dark {
+
+
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 26px;
+
+    border-radius: 25px;
+
+
+    color: #8B8B8B;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+}

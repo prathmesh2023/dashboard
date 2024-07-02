@@ -1,0 +1,659 @@
+{% extends 'base.html' %}
+{% block title %}
+cctv
+    
+{% endblock title %}
+{% block nav_link %}
+                    <span style="text-decoration: none; color:#878787; cursor: pointer;" onclick="window.location.href='/'">Home</span> >  Ai Surveillance
+{% endblock nav_link %}
+
+{% block main %}
+{% load static %}
+
+<div class="row">
+
+
+    <div class="col-md-7 gx-0">
+        <div class="box-main1">
+            <div class="video-section">
+                <div class="heading-part">
+                    <div class="left">
+                        <span>Video Visuallization</span>
+                    </div>
+                    <div class="right">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                viewBox="0 0 19 19" fill="none">
+                                <path
+                                    d="M16.625 16.6252L13.1868 13.187M13.1868 13.187C13.7749 12.5988 14.2414 11.9006 14.5597 11.1322C14.878 10.3638 15.0418 9.54022 15.0418 8.7085C15.0418 7.87677 14.878 7.05319 14.5597 6.28477C14.2414 5.51636 13.7749 4.81816 13.1868 4.23004C12.5987 3.64192 11.9005 3.1754 11.1321 2.85711C10.3637 2.53882 9.54007 2.375 8.70834 2.375C7.87662 2.375 7.05303 2.53882 6.28462 2.85711C5.5162 3.1754 4.81801 3.64192 4.22989 4.23004C3.04212 5.4178 2.37485 7.02875 2.37485 8.7085C2.37485 10.3882 3.04212 11.9992 4.22989 13.187C5.41765 14.3747 7.0286 15.042 8.70834 15.042C10.3881 15.042 11.999 14.3747 13.1868 13.187Z"
+                                    stroke="#363636" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+
+                        <span><svg xmlns="http://www.w3.org/2000/svg" width="19" height="19"
+                                viewBox="0 0 19 19" fill="none">
+                                <path
+                                    d="M9.49999 2.375C8.62916 2.375 7.91666 3.0875 7.91666 3.95833C7.91666 4.82917 8.62916 5.54167 9.49999 5.54167C10.3708 5.54167 11.0833 4.82917 11.0833 3.95833C11.0833 3.0875 10.3708 2.375 9.49999 2.375ZM9.49999 13.4583C8.62916 13.4583 7.91666 14.1708 7.91666 15.0417C7.91666 15.9125 8.62916 16.625 9.49999 16.625C10.3708 16.625 11.0833 15.9125 11.0833 15.0417C11.0833 14.1708 10.3708 13.4583 9.49999 13.4583ZM9.49999 7.91667C8.62916 7.91667 7.91666 8.62917 7.91666 9.5C7.91666 10.3708 8.62916 11.0833 9.49999 11.0833C10.3708 11.0833 11.0833 10.3708 11.0833 9.5C11.0833 8.62917 10.3708 7.91667 9.49999 7.91667Z"
+                                    fill="#363636" />
+                            </svg></span>
+                    </div>
+                </div>
+                <div class="camras">
+                    <div id="video-container" class="max-video-container" style="height: auto; width: 100%;">
+                        {% comment %} <img src=" {% static 'video.jpg' %}" alt=""> {% endcomment %}
+
+                        
+                         <div id="video-container"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="all-servillance">
+            <div class="heading">
+                <span>AI Surveillance Tools</span>
+            </div>
+            <div class="cards ">
+                <div class="row gx-0">
+                    <div class="col">
+                    
+                        <div class="frame " onclick="window.location.href='/obj_detection/{{id}}'">
+                            <center>
+                                <div class="circle tex-center ">
+
+                                    <img src="{% static 'png/3dobj.png' %}" alt="" style="aspect-ratio: 3/2; ">
+                                </div>
+                                <span>AI Object Detection</span>
+                            </center>
+                        </div>
+                  
+                    </div>
+
+                    <div class="col">
+                        <div class="frame " onclick="window.location.href='/obj_tracking/{{id}}'">
+                            <center>
+                                <div class="circle tex-center ">
+
+                                    <img src="{% static 'svg/object_tracking.svg' %}" alt="">
+                                </div>
+                                <span>Object Tracking</span>
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="frame " onclick="window.location.href='/ai_bot/{{id}}'">
+                            <center>
+                                <div class="circle tex-center ">
+                                    <img src="{% static 'png/Bot.png' %}" alt="">
+                                </div>
+                                <span>AI Voice Boat</span>
+                            </center>
+                        </div>
+                    </div>
+
+
+
+
+                    <div class="col ">
+                        <div class="frame ">
+                            <center>
+                                <div class="circle tex-center ">
+                                    <img src="{% static 'png/motion.png' %}" alt="">
+                                </div>
+                                <span>Motion Detection</span>
+                            </center>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="frame ">
+                            <center>
+                                <div class="circle tex-center ">
+                                    <img src="{% static 'png/Alarm.png' %}" alt="">
+                                </div>
+                                <span>Notification</span>
+                            </center>
+                        </div>
+                    </div>
+
+                    <!-- <div class="col">
+                        <div class="frame ">
+                            <center>
+                            <div class="circle tex-center ">
+                                <img src="{% static 'png/Alarm.png' %}" alt="">
+                            </div>
+                            <span>Object Trainning</span>
+                        </center>
+                        </div>
+                    </div>
+-->
+
+
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="col-md-4 gx-0">
+        <div class="surveillance_point ">
+            <div class="heading">
+
+                <div class="left">
+                    <span>Surveillance Point</span>
+                </div>
+
+                <div class="right">
+                    <img src="{% static 'svg/red_dot.svg' %}" alt="">
+                    <img src="{% static 'svg/location.svg' %}" alt="">
+                    <span class="" style="margin-left: 8px;">[DB6345]</span>
+                </div>
+
+
+            </div>
+
+            <div class="name">
+                <span>NAME : Ranilakshmibai Udyan wakad.</span>
+            </div>
+            <div class="desc">
+                <div class="row">
+                    <div class="col-sm-5 sensor_name ">
+                        <span>Security cameras:</span>
+
+                    </div>
+                    <div class="col-7 sensor_id px-0">
+                        <span class="active">A12C1</span>
+                        <span>A12C1</span>
+                        <span>A12C1</span>
+                        <span>A12C1</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="desc">
+                <div class="row">
+                    <div class="col-5 sensor_name">
+                        <span>Motion Sensor :</span>
+
+                    </div>
+                    <div class="col-7 sensor_id  px-0">
+                        <span>A12C1</span>
+                        <span class="active-danger">A12C1</span>
+                        <span>A12C1</span>
+                        <span>A12C1</span>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="desc">
+                <div class="row">
+                    <div class="col-5 sensor_name">
+                        <span>Motion Sensor :</span>
+
+                    </div>
+                    <div class="col-7 sensor_id  px-0">
+                        <span class="active-danger">A12C1</span>
+                        <span>A12C1</span>
+                        <span>A12C1</span>
+                        <span>A12C1</span>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="calender">
+            <div class="heading-part">
+                <div class="left">
+                    <span>Surveillance Hub</span>
+                </div>
+                <div class="right">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-outline-dark btn-sm">Previous</button>
+
+                        <button type="button" class="btn btn-dark btn-sm">Ongoing</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="heading-part-2">
+                <div class="left">
+                    <span>January 2024</span>
+                </div>
+                <div class="right">
+                    <div class="frame">
+                        <div class="frame1">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="8" viewBox="0 0 6 8"
+                                fill="none">
+                                <path
+                                    d="M4.79126 1.08216L1.92326 3.95401L4.95278 6.91496C4.95283 6.915 4.95287 6.91504 4.95291 6.91508C4.99151 6.9526 5.02221 6.99748 5.04317 7.04707C5.06416 7.09671 5.07498 7.15006 5.07498 7.20395C5.07498 7.25784 5.06416 7.31119 5.04317 7.36083C5.02218 7.41047 4.99145 7.45539 4.95278 7.49294L4.95279 7.49294L4.95258 7.49314C4.87445 7.56858 4.77009 7.61074 4.66148 7.61074C4.55287 7.61074 4.44851 7.56858 4.37038 7.49314L4.37038 7.49314L4.36997 7.49274L1.04743 4.24744C1.04738 4.24739 1.04733 4.24734 1.04728 4.24729C1.00891 4.21005 0.978328 4.16555 0.957331 4.11637C0.936306 4.06713 0.925309 4.01419 0.924983 3.96064C0.924657 3.9071 0.935008 3.85403 0.955431 3.80454C0.975829 3.7551 1.00586 3.71023 1.04378 3.67253C1.04383 3.67248 1.04388 3.67243 1.04393 3.67238L4.20055 0.511369L4.20076 0.511158C4.278 0.434279 4.38217 0.390548 4.49113 0.389256C4.60009 0.387964 4.70525 0.429203 4.78428 0.50421C4.82339 0.54128 4.85466 0.585819 4.87625 0.635192C4.89784 0.684577 4.9093 0.737793 4.90996 0.791688C4.91061 0.845584 4.90044 0.899061 4.88005 0.948955C4.85968 0.998804 4.82952 1.04406 4.79136 1.08206C4.79132 1.08209 4.79129 1.08212 4.79126 1.08216Z"
+                                    fill="#9D9D9D" stroke="#9D9D9D" stroke-width="0.2" />
+                            </svg>
+
+
+                        </div>
+                        <div class="frame2 mx-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="6" height="8" viewBox="0 0 6 8"
+                                fill="none">
+                                <path
+                                    d="M1.20874 1.08216L4.07674 3.95401L1.04722 6.91496C1.04717 6.915 1.04713 6.91504 1.04709 6.91508C1.00849 6.9526 0.977794 6.99748 0.956828 7.04707C0.935839 7.09671 0.925024 7.15006 0.925024 7.20395C0.925024 7.25784 0.935839 7.31119 0.956828 7.36083C0.977816 7.41047 1.00855 7.45539 1.04722 7.49294L1.04721 7.49294L1.04742 7.49314C1.12555 7.56858 1.22991 7.61074 1.33852 7.61074C1.44713 7.61074 1.55149 7.56858 1.62962 7.49314L1.62962 7.49314L1.63003 7.49274L4.95257 4.24744C4.95262 4.24739 4.95267 4.24734 4.95272 4.24729C4.99109 4.21005 5.02167 4.16555 5.04267 4.11637C5.06369 4.06713 5.07469 4.01419 5.07502 3.96064C5.07534 3.9071 5.06499 3.85403 5.04457 3.80454C5.02417 3.7551 4.99414 3.71023 4.95622 3.67253C4.95617 3.67248 4.95612 3.67243 4.95607 3.67238L1.79945 0.511369L1.79924 0.511158C1.722 0.434279 1.61783 0.390548 1.50887 0.389256C1.39991 0.387964 1.29475 0.429203 1.21572 0.50421C1.17661 0.54128 1.14534 0.585819 1.12375 0.635192C1.10216 0.684577 1.0907 0.737793 1.09004 0.791688C1.08939 0.845584 1.09956 0.899061 1.11995 0.948955C1.14032 0.998804 1.17048 1.04406 1.20864 1.08206C1.20868 1.08209 1.20871 1.08212 1.20874 1.08216Z"
+                                    fill="#9D9D9D" stroke="#9D9D9D" stroke-width="0.2" />
+                            </svg>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="alert-table">
+            <div class="heading-part">
+                <div class="left">
+                    <span>Alerts </span>
+                </div>
+                <div class="right">
+                    <!-- <select name="" id="">
+                        <option>All</option>
+                        <option>1</option>
+                        <option>2</option>
+                    </select> -->
+                    <div class="search mx-2">
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13"
+                            fill="none">
+                            <g clip-path="url(#clip0_176_284)">
+                                <path d="M6.45723 0.683594V12.2296M12.2303 6.45662H0.684204"
+                                    stroke="#595959" stroke-width="2" stroke-linecap="square"
+                                    stroke-linejoin="round" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_176_284">
+                                    <rect width="13" height="13" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </div>
+
+                    <div class="search"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M14 14.0001L11.1047 11.1048M11.1047 11.1048C11.5999 10.6095 11.9928 10.0216 12.2608 9.3745C12.5289 8.72742 12.6668 8.03387 12.6668 7.33347C12.6668 6.63307 12.5289 5.93953 12.2608 5.29244C11.9928 4.64535 11.5999 4.0574 11.1047 3.56214C10.6094 3.06688 10.0215 2.67402 9.37438 2.40599C8.72729 2.13795 8.03375 2 7.33335 2C6.63295 2 5.9394 2.13795 5.29232 2.40599C4.64523 2.67402 4.05727 3.06688 3.56202 3.56214C2.5618 4.56236 1.99988 5.91895 1.99988 7.33347C1.99988 8.748 2.5618 10.1046 3.56202 11.1048C4.56224 12.105 5.91882 12.6669 7.33335 12.6669C8.74787 12.6669 10.1045 12.105 11.1047 11.1048Z"
+                                stroke="#595959" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                    <div class="setting mx-2"> <svg xmlns="http://www.w3.org/2000/svg" width="17"
+                            height="18" viewBox="0 0 17 18" fill="none">
+                            <path
+                                d="M13.8125 8.99984C13.8125 8.83692 13.8054 8.68109 13.7913 8.51817L15.1088 7.51942C15.3921 7.30692 15.47 6.91025 15.2929 6.59859L13.9683 4.31067C13.8834 4.16063 13.746 4.04727 13.5826 3.99236C13.4192 3.93745 13.2412 3.94486 13.0829 4.01317L11.56 4.65775C11.2979 4.47359 11.0217 4.31067 10.7313 4.17609L10.5258 2.53984C10.4833 2.18567 10.1788 1.9165 9.82459 1.9165H7.18251C6.82126 1.9165 6.51667 2.18567 6.47417 2.53984L6.26876 4.17609C5.97834 4.31067 5.70209 4.47359 5.44001 4.65775L3.91709 4.01317C3.59126 3.8715 3.20876 3.999 3.03167 4.31067L1.70709 6.60567C1.53001 6.91734 1.60792 7.30692 1.89126 7.5265L3.20876 8.52525C3.17939 8.84333 3.17939 9.16343 3.20876 9.4815L1.89126 10.4803C1.60792 10.6928 1.53001 11.0894 1.70709 11.4011L3.03167 13.689C3.20876 14.0007 3.59126 14.1282 3.91709 13.9865L5.44001 13.3419C5.70209 13.5261 5.97834 13.689 6.26876 13.8236L6.47417 15.4598C6.51667 15.814 6.82126 16.0832 7.17542 16.0832H9.81751C10.1717 16.0832 10.4763 15.814 10.5188 15.4598L10.7242 13.8236C11.0146 13.689 11.2908 13.5261 11.5529 13.3419L13.0758 13.9865C13.4017 14.1282 13.7842 14.0007 13.9613 13.689L15.2858 11.4011C15.4629 11.0894 15.385 10.6998 15.1017 10.4803L13.7842 9.4815C13.8054 9.31859 13.8125 9.16275 13.8125 8.99984ZM8.52834 11.479C7.16126 11.479 6.04917 10.3669 6.04917 8.99984C6.04917 7.63275 7.16126 6.52067 8.52834 6.52067C9.89542 6.52067 11.0075 7.63275 11.0075 8.99984C11.0075 10.3669 9.89542 11.479 8.52834 11.479Z"
+                                fill="#595959" />
+                        </svg></div>
+                </div>
+
+            </div>
+
+            <div class="date">
+                <span>Date : 30-04-2024</span>
+            </div>
+
+
+            <div class="table_div">
+                <table class="table_main" id="data-container">
+                    <tr>
+                        <th>#</th>
+                        <th>ID</th>
+                        <th>Time</th>
+                        <th>Alert Type</th>
+                        <th>Action</th>
+                        <th>Status</th>
+                    </tr>
+
+                    <tr onclick="window.location.href='/action_chart'">
+
+                        <td>01</td>
+                        <td>A121</td>
+                        <td>22:12:04</td>
+                        <td>Security Alert</td>
+                        <td>Officer</td>
+                        <td class="status" style="color: #00C72C;">Done</td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>01</td>
+                        <td>A121</td>
+                        <td>22:12:04</td>
+                        <td>Security Alert</td>
+                        <td>Officer</td>
+                        <td class="status" style="color: #00C72C;">Done</td>
+                        </a>
+
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>A121</td>
+                        <td>22:12:04</td>
+                        <td>Security Alert</td>
+                        <td>Officer</td>
+                        <td class="status" style=" color: #F00;">pending</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>A121</td>
+                        <td>22:12:04</td>
+                        <td>Security Alert</td>
+                        <td>Officer</td>
+                        <td class="status" style=" color: #F00;">pending</td>
+
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>A121</td>
+                        <td>22:12:04</td>
+                        <td>Security Alert</td>
+                        <td>Officer</td>
+                        <td class="status">Done</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>A121</td>
+                        <td>22:12:04</td>
+                        <td>Security Alert</td>
+                        <td>Officer</td>
+                        <td class="status">Done</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>A121</td>
+                        <td>22:12:04</td>
+                        <td>Security Alert</td>
+                        <td>Officer</td>
+                        <td class="status">Done</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>A121</td>
+                        <td>22:12:04</td>
+                        <td>Security Alert</td>
+                        <td>Officer</td>
+                        <td class="status text-green">Done</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>A121</td>
+                        <td>22:12:04</td>
+                        <td>Security Alert</td>
+                        <td>Officer</td>
+                        <td class="status text-green">Done</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>A121</td>
+                        <td>22:12:04</td>
+                        <td>Security Alert</td>
+                        <td>Officer</td>
+                        <td class="status text-red">pending</td>
+                    </tr>
+                    <tr>
+                        <td>01</td>
+                        <td>A121</td>
+                        <td>22:12:04</td>
+                        <td>Security Alert</td>
+                        <td>Officer</td>
+                        <td class="status text-red">pending</td>
+                    </tr>
+                </table>
+
+
+
+            </div>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const apiUrl = 'http://localhost:8000/api/camera_alerts/{{id}}'; // Replace with your API URL
+                    const dataContainer = document.getElementById('data-container');
+                    if (!dataContainer) {
+                        console.error(' dataContainer element not found.');
+                        return;
+                    }
+                    var audio = new Audio('{% static 'sound/beep-single.mp3' %}'); // Update with the correct path to your audio file
+                    let previousDataCount = 0;
+                
+                    // Function to fetch data from API
+                    async function fetchData() {
+                        try {
+                            const response = await fetch(apiUrl);
+                            if (!response.ok) {
+                                throw new Error(`HTTP error! status: ${response.status}`);
+                            }
+                            const data = await response.json();
+                            displayData(data);
+                        } catch (error) {
+                            console.error('No Alert Found:', error);
+                            dataContainer.innerHTML = '<tr><td colspan="6">No Alert Found</td></tr>';
+                        }
+                    }
+                
+                    // Function to play audio a specific number of times
+                    function playAudio(times) {
+                        if (times > 0) {
+                            audio.play();
+                            audio.onended = () => {
+                                playAudio(times - 1);
+                            };
+                        }
+                    }
+                
+                    // Function to display data in the DOM
+                    function displayData(data) {
+                        console.log("Fetched data:", data);  // Debugging statement
+                        console.log("Previous data count:", previousDataCount);  // Debugging statement
+                        console.log("New data count:", data.length);  // Debugging statement
+                
+                        // Check if the new data count is greater than the previous data count
+                        if (data.length > previousDataCount) {
+                            console.log("New data detected.");  // Debugging statement
+                            const newAlerts = data.slice(previousDataCount); // Get only new alerts
+                            newAlerts.forEach(alert => {
+                                if (alert.alert_type >= 1 && alert.alert_type <= 8) {
+                                    playAudio(alert.alert_type);
+                                }
+                            });
+                        } else {
+                            console.log("No new data detected.");  // Debugging statement
+                        }
+                
+                        // Clear existing rows except the header
+                        const rows = dataContainer.querySelectorAll('tr');
+                        rows.forEach((row, index) => {
+                            if (index > 0) row.remove();
+                        });
+                
+                        // Update previous data count
+                        previousDataCount = data.length;
+                
+                        // Reverse the data array
+                        const reversedData = data.slice().reverse();
+                
+                        // Assuming the data is an array of objects
+                        reversedData.forEach((item, index) => {
+                            // Parse the datetime string into a Date object
+                            const dateTime = new Date(item.date_time);
+                            // Extract time components
+                            const hours = dateTime.getHours().toString().padStart(2, '0');
+                            const minutes = dateTime.getMinutes().toString().padStart(2, '0');
+                            const seconds = dateTime.getSeconds().toString().padStart(2, '0');
+                            // Construct the time string
+                            const timeString = `${hours}:${minutes}:${seconds}`;
+                
+                            const row = document.createElement('tr');
+                
+                            row.innerHTML = `
+                                <td>${index + 1}</td>
+                                <td>A${item.alert_id}</td>
+                                <td>${timeString}</td>
+                                <td>${item.alert_type}</td>
+                                <td>${item.action}</td>
+                                <td class="status">${item.status ? item.status.toLowerCase() : 'Unknown'}</td>
+                            `;
+                
+                            // If you want to add the onclick event to each row
+                            row.addEventListener('click', () => {
+                                window.location.href = `/action_chart/${item.alert_id}/{{id}}`;
+                            });
+                
+                            dataContainer.appendChild(row);
+                        });
+                    }
+                
+                    // Fetch data initially
+                    fetchData();
+                
+                    // Fetch data every 10 seconds (10000 ms)
+                    setInterval(fetchData, 1000);
+                });
+                
+            </script>
+
+            <!-- <button class="add-button float-end rounded-circle">+</button> -->
+
+
+        </div>
+        <br>
+
+    </div>
+</div>
+
+
+<script>
+    var videoContainer = document.getElementById('video-container');
+  
+    function loadVideo() {
+        var videoElement = document.createElement('img');
+        videoElement.src = '/streaming/video_feed/{{id}}';
+        console.log(videoElement.src);
+        videoContainer.appendChild(videoElement);
+    }
+  
+    loadVideo();
+  </script> 
+  
+
+  <!-- alerts -->
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const apiUrl = 'http://localhost:8000/api/camera_alerts'; // Replace with your API URL
+        const dataContainer = document.getElementById('data-container');
+        if (!dataContainer) {
+            console.error('Error: dataContainer element not found.');
+            return;
+        }
+        var audio = new Audio('{% static 'sound/beep-single.mp3' %}');
+        let previousDataCount = 0;
+    
+        // Function to fetch data from API
+        async function fetchData() {
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const data = await response.json();
+                displayData(data);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+                dataContainer.innerHTML = '<tr><td colspan="6">Error fetching data</td></tr>';
+            }
+        }
+    
+        // Function to display data in the DOM
+        function displayData(data) {
+            console.log("Fetched data:", data);  // Debugging statement
+            console.log("Previous data count:", previousDataCount);  // Debugging statement
+            console.log("New data count:", data.length);  // Debugging statement
+    
+            // Check if the new data count is greater than the previous data count
+            if (data.length > previousDataCount) {
+                console.log("New data detected, playing sound.");  // Debugging statement
+
+                audio.play();
+            } else {
+                console.log("No new data detected.");  // Debugging statement
+            }
+    
+            // Clear existing rows except the header
+            const rows = dataContainer.querySelectorAll('tr');
+            rows.forEach((row, index) => {
+                if (index > 0) row.remove();
+            });
+    
+            // Update previous data count
+            previousDataCount = data.length;
+    
+            // Reverse the data array
+            const reversedData = data.slice().reverse();
+    
+            // Assuming the data is an array of objects
+            reversedData.forEach((item, index) => {
+                // Parse the datetime string into a Date object
+                const dateTime = new Date(item.date_time);
+                // Extract time components
+                const hours = dateTime.getHours().toString().padStart(2, '0');
+                const minutes = dateTime.getMinutes().toString().padStart(2, '0');
+                const seconds = dateTime.getSeconds().toString().padStart(2, '0');
+                // Construct the time string
+                const timeString = `${hours}:${minutes}:${seconds}`;
+    
+                const row = document.createElement('tr');
+    
+                row.innerHTML = `
+                    <td>${index + 1}</td>
+                    <td>A${item.alert_id}</td>
+                    <td>${timeString}</td>
+                    <td>${item.alert_type}</td>
+                    <td>${item.action}</td>
+                    <td class="status">${item.status ? item.status.toLowerCase() : 'Unknown'}</td>
+                `;
+    
+                // If you want to add the onclick event to each row
+                row.addEventListener('click', () => {
+                    window.location.href = '/action_chart';
+                });
+    
+                dataContainer.appendChild(row);
+            });
+        }
+    
+        // Fetch data initially
+        fetchData();
+    
+        // Fetch data every 10 seconds (10000 ms)
+        setInterval(fetchData, 1000);
+    });
+    
+</script> -->
+
+
+{% endblock main %}

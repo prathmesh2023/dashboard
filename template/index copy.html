@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dashboard</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    
+    
+</head>
+<body>
+
+    <div class="container-fuid m-3 bg-color-primary p-2" style="border: 1px solid black;">
+        <span class="b mx-2" style="font-weight: 800;">Advance Security And Ai Survillance System</span>
+    </div>
+
+    <div class="container-fluid m-1">
+        <div class="row">
+            <div class="col-8">
+                
+                <h6 class="text-secondary" style="font-weight: 800; padding:8px; border:1px solid black; width:100%">Video Visualization</h6>
+
+                <div id="video-container" style="width: 100%;"></div>
+
+            </div>
+            <div class="col-4">
+                
+            </div>
+        </div>
+    </div>
+  
+
+    
+    
+
+    <div id="video-container"></div>
+    <script>
+        var videoContainer = document.getElementById('video-container');
+    
+        function loadVideo() {
+            var videoElement = document.createElement('img');
+            videoElement.src = '/video_feed/';
+            videoContainer.appendChild(videoElement);
+        }
+    
+        loadVideo();
+    </script>
+    
+</body>
+</html>
